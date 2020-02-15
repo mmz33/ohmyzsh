@@ -8,7 +8,7 @@ else
     grep-flags-available() {
         command grep "$@" "" &>/dev/null <<< ""
     }
-
+    
     # Ignore these folders (if the necessary grep flags are available)
     EXC_FOLDERS="{.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
 
