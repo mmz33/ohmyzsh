@@ -223,3 +223,10 @@ function omz_urldecode {
 
   echo -E "$decoded"
 }
+
+function realpath() {
+  # first check if it is already a realpath then just print it
+  # else, output pwd + file name
+  [[ $1 == /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+
